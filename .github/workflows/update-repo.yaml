@@ -25,6 +25,8 @@ jobs:
       
       - name: Create initialize files
         run: |
+          rm -rf init-angular
+          rm -rf init-ionic
           ng new init-angular --interactive=false --skip-git=true --skip-install=true --ssr=false --style=scss
           ionic start init-ionic blank --type=angular-standalone --no-deps --no-git
 
